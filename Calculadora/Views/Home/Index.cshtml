@@ -3,6 +3,93 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Calculadora - TI2</h1>
 </div>
+
+
+@*  código de interface da minha calculadora   *@
+
+
+<form method="post">
+
+    @* variaveis para criar "memoria" no HTTP *@
+    <input type="hidden" value="@ViewBag.Operador" name="operador" />
+    <input type="hidden" value="@ViewBag.PrimeiroOperando" name="primeiroOperando" />
+    <input type="hidden" value="@ViewBag.LimpaVisor" name="limpaVisor" />
+
+
+    @* grafismo da calculadora *@
+
+    <table border="1"style="font-weight:bold; border:solid; border-color:blueviolet;">
+        <tr>
+            <td colspan="4">
+                <input type="text" name="visor" readonly="readonly" value="@ViewBag.Visor" style="text-align:right;" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="C" name="bt" style="width:100%"/>
+            </td>
+            <td>
+                <input type="submit" value="+/-" name="bt" style="width:100%" />
+            </td>
+            <td>
+                <input type="submit" value=":" name="bt" style="width:100%" />
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="7" name="bt" style="width:100%"  />
+            </td>
+            <td>
+                <input type="submit" value="8" name="bt" style="width:100%"  />
+            </td>
+            <td>
+                <input type="submit" value="9" name="bt" style="width:100%"  />
+            </td>
+            <td border="1">
+                <input type="submit" value="x" name="bt" style="width:100%"  />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="4" name="bt" style="width:100%"  />
+            </td>
+            <td>
+                <input type="submit" value="5" name="bt" style="width:100%"  />
+            </td>
+            <td>
+                <input type="submit" value="6" name="bt" style="width:100%"  />
+            </td>
+            <td>
+                <input type="submit" value="-" name="bt" style="width:100%"  />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="1" name="bt" style="width:100%"  />
+            </td>
+            <td>
+                <input type="submit" value="2" name="bt" style="width:100%"  />
+            </td>
+            <td>
+                <input type="submit" value="3" name="bt" style="width:100%"  />
+            </td>
+            <td>
+                <input type="submit" value="+" name="bt" style="width:100%"  />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="0" name="bt" style="width:100%"  />
+            </td>
+            <td>
+                <input type="submit" value="," name="bt" style="width:100%"  />
+            </td>
+            <td colspan="2">
+                <input type="submit" value="=" name="bt" style="width:100%"  />
+            </td>
+        </tr>
+    </table>
+</form>
